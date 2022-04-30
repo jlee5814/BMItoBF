@@ -1,0 +1,16 @@
+#Description: This program uses python to calculate an individual's Body Mass Index (BMI)
+#BMI is a convenient rule of thumb used to broadly categorize: underweight, normal weight, overweight, obese 
+#based on tissue max and height
+#A common use of the BMI is to assess how far an individual's body weight departs from what is normal for a person's height
+#overweight and obese individuals are at an increased risk for some diseases e.g., sleep apnea, hypertension, type-2 diabetes, stroke, infertility
+
+#Enter weight and height 
+weight = float(input("Please enter your weight (lbs): "))
+height = float(input("Please enter your height (inches): "))
+
+#Calculate the individual's BMI
+h2 = height ** 2 
+w = weight
+#Calculate the BMI of an individual in U.S. units using the BMI formula
+BMI = (w/h2) * 703
+BMI = round(BMI, 2)
