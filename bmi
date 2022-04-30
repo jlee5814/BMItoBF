@@ -14,3 +14,69 @@ w = weight
 #Calculate the BMI of an individual in U.S. units using the BMI formula
 BMI = (w/h2) * 703
 BMI = round(BMI, 2)
+
+#Show the indivudals BMI
+print("Your Body Mass Index (BMI) is:", BMI)
+
+#Print the individuals results based on the commonly used BMI ranges in North America and Europe for 
+#individuals aged 21 and up
+if BMI > 0:
+  if BMI < 16:
+    print("You are severely underweight")
+  elif BMI < 17:
+    print("You are moderately underweight")
+  elif BMI < 18.5:
+    print("You are underweight")
+  elif BMI < 25:
+    print("You are healthy")
+  elif BMI < 30:
+    print("You are overweight")
+  elif BMI < 35:
+    print("You are moderately obese")
+  elif BMI <= 40:
+    print("You are severely obese")
+  elif BMI > 40:
+    print("You are morbidly obese")
+  
+else:
+  print("The information that you put in is incorrect")
+  
+#Body Fat %
+age = int(input("What is your age: "))
+gender = input("What is your gender: ")
+gender = gender.lower()
+if gender == "male":
+  gender_val = 1
+else:
+  gender_val = 0   
+
+BF = (1.39 * BMI) + (0.16 * age) - (10.34 * gender_val) - 9
+BF = round(BF, 2)  
+
+
+if gender == "male":  
+  if BF < 5:
+    print("You only have essential fat")
+  elif BF < 13:
+    print("You are an athlete")
+  elif BF < 17:
+    print("You are physically fit")
+  elif BF < 24:
+    print("You are average")
+  elif BF >= 25:
+    print("You are obese")
+
+if gender == "female":  
+  if BF < 13:
+    print("You only have essential fat")
+  elif BF < 20:
+    print("You are an athlete")
+  elif BF < 24:
+    print("You are physically fit")
+  elif BF < 31:
+    print("You are average")
+  elif BF >= 32:
+    print("You are obese")
+
+#Show the indivudals Body Fat %
+print("Your Body Fat % is:", BF)
